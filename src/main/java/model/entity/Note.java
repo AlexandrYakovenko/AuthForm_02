@@ -155,8 +155,8 @@ public class Note {
         return registrationDate;
     }
 
-    public void setRegistrationDate(String registartionDate) {
-        this.registrationDate = registartionDate;
+    public void setRegistrationDate(String registrationDate) {
+        this.registrationDate = registrationDate;
     }
 
     public String getChangingDataDate() {

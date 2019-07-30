@@ -29,6 +29,7 @@ public class Controller {
                noteModel.noteModelStart();
                isTrue = true;
            } catch (Exception e) {
+               inputNote.rewriteNickname();
                view.printWrongInput(INPUT_NICKNAME);
            }
         }
