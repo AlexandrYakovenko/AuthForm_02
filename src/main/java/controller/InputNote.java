@@ -79,10 +79,10 @@ public class InputNote {
         return note;
     }
 
-    public Note rewriteNickname() {
+    public Note rewriteNickname(Note note) {
         note.setNickname(
                 uC.inputStringData(
-                        INPUT_NICKNAME, uC.checkRegEx("nickname")));
+                        WRONG_NICKNAME, uC.checkRegEx("nickname")));
         return  note;
     }
 }

@@ -20,7 +20,9 @@ public class Note {
     private String registrationDate;
     private String changingDataDate;
 
+
     public Note() {}
+
 
     public String getSurname() {
         return surname;
@@ -67,7 +69,7 @@ public class Note {
         return group.name();
     }
     //setter param is String, but convert in type of Group
-    public void setGroup(String group) throws IllegalArgumentException {
+    public void setGroup(String group) {
         this.group = Group.valueOf(group);
     }
 
@@ -175,7 +177,7 @@ public class Note {
                 ",\n patronymic = '" + patronymic + '\'' +
                 ",\n nickname = '" + nickname + '\'' +
                 ",\n comment = '" + comment + '\'' +
-                ",\n group "  + group +
+                ",\n group = '"  + group + '\'' +
                 ",\n homeNumber = '" + homeNumber + '\'' +
                 ",\n firstMobileNumber = '" + firstMobileNumber + '\'' +
                 ",\n secondMobileNumber = '" + secondMobileNumber + '\'' +
@@ -186,7 +188,7 @@ public class Note {
                 ",\n street = '" + street + '\'' +
                 ",\n houseNumber = '" + houseNumber + '\'' +
                 ",\n flatNumber = '" + flatNumber + '\'' +
-                ",\n registrationDate ='" + registrationDate + '\'' +
+                ",\n registrationDate = '" + registrationDate + '\'' +
                 ",\n changingDataDate = '" + changingDataDate + '\'' +
                 '}';
     }

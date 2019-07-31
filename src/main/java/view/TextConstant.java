@@ -7,6 +7,7 @@ public interface TextConstant {
     String INPUT_NAME = "name";
     String INPUT_PATRONYMIC = "patronymic";
     String INPUT_NICKNAME = "nickname";
+    String WRONG_NICKNAME = "wrong.nickname";
     String INPUT_COMMENTARY = "commentary";
     String INPUT_GROUP = "group";
     String INPUT_HOME_PHONE = "home.phone";

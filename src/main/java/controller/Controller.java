@@ -1,5 +1,6 @@
 package controller;
 
+import model.exceptions.NicknameException;
 import model.entity.Note;
 import model.NoteModel;
 import view.View;
@@ -20,7 +21,7 @@ public class Controller {
     public void processUser() {
         Scanner sc = new Scanner(System.in);
         InputNote inputNote = new InputNote(note, view, sc);
-        this.note = inputNote.writeNote();
+        note = inputNote.writeNote();
 
         NoteModel noteModel = new NoteModel(note);
         boolean isTrue = false;
@@ -28,9 +29,8 @@ public class Controller {
            try {
                noteModel.noteModelStart();
                isTrue = true;
-           } catch (Exception e) {
-               inputNote.rewriteNickname();
-               view.printWrongInput(INPUT_NICKNAME);
+           } catch (NicknameException e) {
+               note = inputNote.rewriteNickname(note);
            }
         }
 

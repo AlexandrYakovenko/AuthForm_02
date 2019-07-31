@@ -2,6 +2,7 @@ package model;
 
 import model.entity.Note;
 import model.entity.NoteDB;
+import model.exceptions.NicknameException;
 
 public class UtilityNote {
     private Note note;
@@ -15,12 +16,11 @@ public class UtilityNote {
         return note;
     }
 
-    public void checkNickname() throws Exception {
+    public void checkNickname() throws NicknameException {
         noteDB = NoteDB.values();
         for (NoteDB e : noteDB) {
-            if ((e.getNickname()).equals(note.getNickname())) {
-                throw new Exception("Rewrite Nickname");
-            }
+            if ((e.getNickname()).equals(note.getNickname()))
+                throw new NicknameException("Rewrite Nickname");
         }
 
         writeDataToDB(noteDB, note);
