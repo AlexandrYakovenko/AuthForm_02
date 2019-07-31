@@ -2,7 +2,6 @@ package controller;
 
 import view.View;
 
-import java.util.ResourceBundle;
 import java.util.Scanner;
 
 import static controller.RegexContainer.*;
@@ -32,7 +31,7 @@ public class UtilityController {
 
         if(locale.equals("en")) {
             switch(regex) {
-                case("full_name") : return REGEX_FULL_NAME_EN ;
+                case("full_name") : return REGEX_FULL_NAME_EN;
                 case("nickname") : return REGEX_NICKNAME_EN;
                 case("comment") : return REGEX_COMMENT;
                 case("group") : return REGEX_GROUP;

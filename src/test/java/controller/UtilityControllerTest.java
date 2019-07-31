@@ -1,26 +1,25 @@
 package controller;
 
-import static org.junit.Assert.*;
-
 import org.junit.*;
-
 import view.View;
 
+import static org.junit.Assert.*;
 
 public class UtilityControllerTest {
 
     @Before
     public void setUp() throws Exception {
-
     }
 
+    @Ignore
     @Test
     public void inputStringData() {
     }
 
     @Test
     public void checkRegEx() {
-        String locale = View.bundle.getLocale().toString();
+        String locale =
+                (String.valueOf(View.bundle.getLocale()).equals("ua")) ? "ua" : "en" ;
         assertEquals("en", locale);
     }
 }

@@ -20,7 +20,7 @@ public class UtilityNote {
         noteDB = NoteDB.values();
         for (NoteDB e : noteDB) {
             if ((e.getNickname()).equals(note.getNickname()))
-                throw new NicknameException("Rewrite Nickname");
+                throw new NicknameException();
         }
 
         writeDataToDB(noteDB, note);
