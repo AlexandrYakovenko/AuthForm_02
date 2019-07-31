@@ -11,7 +11,6 @@ public class UtilityControllerTest {
     public void setUp() throws Exception {
     }
 
-    @Ignore
     @Test
     public void inputStringData() {
     }
